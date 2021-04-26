@@ -18,6 +18,7 @@
 		A711DA9B2636F9F6001DBD31 /* AboutAlgorithmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711DA9A2636F9F6001DBD31 /* AboutAlgorithmsViewController.swift */; };
 		A711DAA02636FAEB001DBD31 /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711DA9F2636FAEB001DBD31 /* Algorithm.swift */; };
 		A711DAA32636FB24001DBD31 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711DAA22636FB24001DBD31 /* Person.swift */; };
+		A711DAAA263719C4001DBD31 /* AlgorithmsInfoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711DAA9263719C4001DBD31 /* AlgorithmsInfoDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		A711DA9A2636F9F6001DBD31 /* AboutAlgorithmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAlgorithmsViewController.swift; sourceTree = "<group>"; };
 		A711DA9F2636FAEB001DBD31 /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
 		A711DAA22636FB24001DBD31 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		A711DAA9263719C4001DBD31 /* AlgorithmsInfoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmsInfoDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		A711DA8B2636F6F1001DBD31 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A711DAA826371986001DBD31 /* Services */,
 				A711DA8D2636F712001DBD31 /* Extensions */,
 			);
 			path = Core;
@@ -136,6 +139,14 @@
 				A711DAA22636FB24001DBD31 /* Person.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A711DAA826371986001DBD31 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A711DAA9263719C4001DBD31 /* AlgorithmsInfoDataManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +225,7 @@
 				A711DA9B2636F9F6001DBD31 /* AboutAlgorithmsViewController.swift in Sources */,
 				A711DA6C2636A3FA001DBD31 /* WelcomeViewController.swift in Sources */,
 				A711DAA32636FB24001DBD31 /* Person.swift in Sources */,
+				A711DAAA263719C4001DBD31 /* AlgorithmsInfoDataManager.swift in Sources */,
 				A711DA4B26368907001DBD31 /* AppDelegate.swift in Sources */,
 				A711DA4D26368907001DBD31 /* SceneDelegate.swift in Sources */,
 			);
