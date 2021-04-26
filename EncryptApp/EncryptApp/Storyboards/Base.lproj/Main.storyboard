@@ -52,6 +52,9 @@
                                         <state key="normal">
                                             <imageReference key="image" image="exclamationmark.circle.fill" catalog="system" symbolScale="large"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="4HQ-XU-hcA" kind="presentation" modalPresentationStyle="overFullScreen" id="SZ0-KQ-ZH6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -79,6 +82,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="44" y="114.69265367316342"/>
+        </scene>
+        <!--aboutAlgorithmsID-->
+        <scene sceneID="a9x-PE-4XI">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="aboutAlgorithmsID" storyboardName="AboutAlgorithms" referencedIdentifier="aboutAlgorithmsID" id="4HQ-XU-hcA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bdR-ds-x0g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="894" y="14"/>
         </scene>
     </scenes>
     <resources>
