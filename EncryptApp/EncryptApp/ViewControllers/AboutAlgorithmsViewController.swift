@@ -11,6 +11,8 @@ class AboutAlgorithmsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.setBackground()
     }
 
     // MARK: - Table view data source
