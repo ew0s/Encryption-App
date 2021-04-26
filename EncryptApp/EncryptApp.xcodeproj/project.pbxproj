@@ -14,6 +14,10 @@
 		A711DA5726368908001DBD31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A711DA5526368908001DBD31 /* LaunchScreen.storyboard */; };
 		A711DA6C2636A3FA001DBD31 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711DA6B2636A3FA001DBD31 /* WelcomeViewController.swift */; };
 		A711DA8F2636F72F001DBD31 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711DA8E2636F72F001DBD31 /* UIViewExtensions.swift */; };
+		A711DA942636F90A001DBD31 /* AboutAlgorithms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A711DA932636F90A001DBD31 /* AboutAlgorithms.storyboard */; };
+		A711DA9B2636F9F6001DBD31 /* AboutAlgorithmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711DA9A2636F9F6001DBD31 /* AboutAlgorithmsViewController.swift */; };
+		A711DAA02636FAEB001DBD31 /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711DA9F2636FAEB001DBD31 /* Algorithm.swift */; };
+		A711DAA32636FB24001DBD31 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711DAA22636FB24001DBD31 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		A711DA5826368908001DBD31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A711DA6B2636A3FA001DBD31 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		A711DA8E2636F72F001DBD31 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		A711DA932636F90A001DBD31 /* AboutAlgorithms.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutAlgorithms.storyboard; sourceTree = "<group>"; };
+		A711DA9A2636F9F6001DBD31 /* AboutAlgorithmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAlgorithmsViewController.swift; sourceTree = "<group>"; };
+		A711DA9F2636FAEB001DBD31 /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
+		A711DAA22636FB24001DBD31 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 		A711DA4926368907001DBD31 /* EncryptApp */ = {
 			isa = PBXGroup;
 			children = (
+				A711DA9E2636FABB001DBD31 /* Models */,
 				A711DA8B2636F6F1001DBD31 /* Core */,
 				A711DA5F263697B5001DBD31 /* Supporting */,
 				A711DA61263697BE001DBD31 /* ViewControllers */,
@@ -81,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				A711DA6B2636A3FA001DBD31 /* WelcomeViewController.swift */,
+				A711DA9A2636F9F6001DBD31 /* AboutAlgorithmsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -90,6 +100,7 @@
 			children = (
 				A711DA5026368907001DBD31 /* Main.storyboard */,
 				A711DA5526368908001DBD31 /* LaunchScreen.storyboard */,
+				A711DA932636F90A001DBD31 /* AboutAlgorithms.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -116,6 +127,15 @@
 				A711DA8E2636F72F001DBD31 /* UIViewExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A711DA9E2636FABB001DBD31 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A711DA9F2636FAEB001DBD31 /* Algorithm.swift */,
+				A711DAA22636FB24001DBD31 /* Person.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +197,7 @@
 			files = (
 				A711DA5726368908001DBD31 /* LaunchScreen.storyboard in Resources */,
 				A711DA5426368908001DBD31 /* Assets.xcassets in Resources */,
+				A711DA942636F90A001DBD31 /* AboutAlgorithms.storyboard in Resources */,
 				A711DA5226368907001DBD31 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,7 +210,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A711DA8F2636F72F001DBD31 /* UIViewExtensions.swift in Sources */,
+				A711DAA02636FAEB001DBD31 /* Algorithm.swift in Sources */,
+				A711DA9B2636F9F6001DBD31 /* AboutAlgorithmsViewController.swift in Sources */,
 				A711DA6C2636A3FA001DBD31 /* WelcomeViewController.swift in Sources */,
+				A711DAA32636FB24001DBD31 /* Person.swift in Sources */,
 				A711DA4B26368907001DBD31 /* AppDelegate.swift in Sources */,
 				A711DA4D26368907001DBD31 /* SceneDelegate.swift in Sources */,
 			);
