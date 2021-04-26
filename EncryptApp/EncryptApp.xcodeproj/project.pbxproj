@@ -13,6 +13,7 @@
 		A711DA5226368907001DBD31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A711DA5026368907001DBD31 /* Main.storyboard */; };
 		A711DA5426368908001DBD31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A711DA5326368908001DBD31 /* Assets.xcassets */; };
 		A711DA5726368908001DBD31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A711DA5526368908001DBD31 /* LaunchScreen.storyboard */; };
+		A711DA6C2636A3FA001DBD31 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711DA6B2636A3FA001DBD31 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A711DA5326368908001DBD31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A711DA5626368908001DBD31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A711DA5826368908001DBD31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A711DA6B2636A3FA001DBD31 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				A711DA4E26368907001DBD31 /* ViewController.swift */,
+				A711DA6B2636A3FA001DBD31 /* WelcomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A711DA4F26368907001DBD31 /* ViewController.swift in Sources */,
+				A711DA6C2636A3FA001DBD31 /* WelcomeViewController.swift in Sources */,
 				A711DA4B26368907001DBD31 /* AppDelegate.swift in Sources */,
 				A711DA4D26368907001DBD31 /* SceneDelegate.swift in Sources */,
 			);
