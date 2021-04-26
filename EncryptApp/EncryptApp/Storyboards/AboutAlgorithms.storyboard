@@ -25,6 +25,9 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="Vl7-O1-CBq" kind="show" id="w7X-a1-aCq"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -44,6 +47,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a15-Ka-evn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-797" y="57"/>
+        </scene>
+        <!--aboutAlgorithmStoryboardID-->
+        <scene sceneID="5nX-rl-nLL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AboutAlgorithm" referencedIdentifier="aboutAlgorithmStoryboardID" id="Vl7-O1-CBq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nos-Qd-D7c"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MgT-iy-Ap7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-92" y="56"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PzN-vU-vRN">
