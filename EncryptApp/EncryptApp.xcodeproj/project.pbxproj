@@ -56,15 +56,47 @@
 		A711DA4926368907001DBD31 /* EncryptApp */ = {
 			isa = PBXGroup;
 			children = (
-				A711DA4A26368907001DBD31 /* AppDelegate.swift */,
-				A711DA4C26368907001DBD31 /* SceneDelegate.swift */,
-				A711DA4E26368907001DBD31 /* ViewController.swift */,
-				A711DA5026368907001DBD31 /* Main.storyboard */,
-				A711DA5326368908001DBD31 /* Assets.xcassets */,
-				A711DA5526368908001DBD31 /* LaunchScreen.storyboard */,
-				A711DA5826368908001DBD31 /* Info.plist */,
+				A711DA5F263697B5001DBD31 /* Supporting */,
+				A711DA61263697BE001DBD31 /* ViewControllers */,
+				A711DA63263697C7001DBD31 /* Storyboards */,
+				A711DA64263697D2001DBD31 /* Resources */,
 			);
 			path = EncryptApp;
+			sourceTree = "<group>";
+		};
+		A711DA5F263697B5001DBD31 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				A711DA4A26368907001DBD31 /* AppDelegate.swift */,
+				A711DA4C26368907001DBD31 /* SceneDelegate.swift */,
+				A711DA5826368908001DBD31 /* Info.plist */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		A711DA61263697BE001DBD31 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A711DA4E26368907001DBD31 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A711DA63263697C7001DBD31 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A711DA5026368907001DBD31 /* Main.storyboard */,
+				A711DA5526368908001DBD31 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A711DA64263697D2001DBD31 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A711DA5326368908001DBD31 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +320,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4JX7HPBVUY;
-				INFOPLIST_FILE = EncryptApp/Info.plist;
+				INFOPLIST_FILE = EncryptApp/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +339,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4JX7HPBVUY;
-				INFOPLIST_FILE = EncryptApp/Info.plist;
+				INFOPLIST_FILE = EncryptApp/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
