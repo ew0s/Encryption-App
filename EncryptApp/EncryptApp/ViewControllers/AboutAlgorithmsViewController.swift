@@ -16,6 +16,7 @@ class AboutAlgorithmsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 80
+        tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
     }
     
     // MARK: - IB Actions
@@ -29,8 +30,7 @@ class AboutAlgorithmsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        print(section)
-        return algorithms[section].name
+        algorithms[section].name
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,8 +42,7 @@ class AboutAlgorithmsViewController: UITableViewController {
         
         var content = cell.defaultContentConfiguration()
         let algorithm = algorithms[indexPath.section]
-
-    
+        
         switch indexPath.row {
         case 0:
             content.text = "About algorithm"
@@ -53,9 +52,10 @@ class AboutAlgorithmsViewController: UITableViewController {
             content.image =  UIImage(named: algorithm.creator.image)
             content.imageProperties.cornerRadius = tableView.rowHeight / 2
         }
-
+        
         cell.contentConfiguration = content
-
+        cell.tintColor = .white
+        
         return cell
     }
 }
