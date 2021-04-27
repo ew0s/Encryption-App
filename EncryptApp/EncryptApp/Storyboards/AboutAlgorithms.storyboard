@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="-797" y="57"/>
         </scene>
-        <!--aboutAlgorithmStoryboardID-->
+        <!--aboutAlgorithmCreatorID-->
         <scene sceneID="5nX-rl-nLL">
             <objects>
-                <viewControllerPlaceholder storyboardName="AboutAlgorithm" referencedIdentifier="aboutAlgorithmStoryboardID" id="Vl7-O1-CBq" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="AboutAlgorithmCreator" referencedIdentifier="aboutAlgorithmCreatorID" id="Vl7-O1-CBq" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="nos-Qd-D7c"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MgT-iy-Ap7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

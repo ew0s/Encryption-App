@@ -21,6 +21,9 @@
 		A711DAAA263719C4001DBD31 /* AlgorithmsInfoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711DAA9263719C4001DBD31 /* AlgorithmsInfoDataManager.swift */; };
 		A711DAC026375233001DBD31 /* AboutAlgorithm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A711DABF26375233001DBD31 /* AboutAlgorithm.storyboard */; };
 		A711DAC326375260001DBD31 /* AboutAlgorithmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711DAC226375260001DBD31 /* AboutAlgorithmViewController.swift */; };
+		A711DAC82638970F001DBD31 /* AboutAlgorithmCreator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A711DAC72638970F001DBD31 /* AboutAlgorithmCreator.storyboard */; };
+		A711DACB26389743001DBD31 /* AboutAlgorithmCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711DACA26389743001DBD31 /* AboutAlgorithmCreatorViewController.swift */; };
+		A711DACE2638A3CA001DBD31 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711DACD2638A3CA001DBD31 /* UIImageViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		A711DAA9263719C4001DBD31 /* AlgorithmsInfoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmsInfoDataManager.swift; sourceTree = "<group>"; };
 		A711DABF26375233001DBD31 /* AboutAlgorithm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutAlgorithm.storyboard; sourceTree = "<group>"; };
 		A711DAC226375260001DBD31 /* AboutAlgorithmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAlgorithmViewController.swift; sourceTree = "<group>"; };
+		A711DAC72638970F001DBD31 /* AboutAlgorithmCreator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutAlgorithmCreator.storyboard; sourceTree = "<group>"; };
+		A711DACA26389743001DBD31 /* AboutAlgorithmCreatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAlgorithmCreatorViewController.swift; sourceTree = "<group>"; };
+		A711DACD2638A3CA001DBD31 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 				A711DA6B2636A3FA001DBD31 /* WelcomeViewController.swift */,
 				A711DA9A2636F9F6001DBD31 /* AboutAlgorithmsViewController.swift */,
 				A711DAC226375260001DBD31 /* AboutAlgorithmViewController.swift */,
+				A711DACA26389743001DBD31 /* AboutAlgorithmCreatorViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -110,6 +117,7 @@
 				A711DA5526368908001DBD31 /* LaunchScreen.storyboard */,
 				A711DA932636F90A001DBD31 /* AboutAlgorithms.storyboard */,
 				A711DABF26375233001DBD31 /* AboutAlgorithm.storyboard */,
+				A711DAC72638970F001DBD31 /* AboutAlgorithmCreator.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -134,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				A711DA8E2636F72F001DBD31 /* UIViewExtensions.swift */,
+				A711DACD2638A3CA001DBD31 /* UIImageViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -214,6 +223,7 @@
 			files = (
 				A711DA5726368908001DBD31 /* LaunchScreen.storyboard in Resources */,
 				A711DA5426368908001DBD31 /* Assets.xcassets in Resources */,
+				A711DAC82638970F001DBD31 /* AboutAlgorithmCreator.storyboard in Resources */,
 				A711DAC026375233001DBD31 /* AboutAlgorithm.storyboard in Resources */,
 				A711DA942636F90A001DBD31 /* AboutAlgorithms.storyboard in Resources */,
 				A711DA5226368907001DBD31 /* Main.storyboard in Resources */,
@@ -232,9 +242,11 @@
 				A711DA9B2636F9F6001DBD31 /* AboutAlgorithmsViewController.swift in Sources */,
 				A711DAC326375260001DBD31 /* AboutAlgorithmViewController.swift in Sources */,
 				A711DA6C2636A3FA001DBD31 /* WelcomeViewController.swift in Sources */,
+				A711DACB26389743001DBD31 /* AboutAlgorithmCreatorViewController.swift in Sources */,
 				A711DAA32636FB24001DBD31 /* Person.swift in Sources */,
 				A711DAAA263719C4001DBD31 /* AlgorithmsInfoDataManager.swift in Sources */,
 				A711DA4B26368907001DBD31 /* AppDelegate.swift in Sources */,
+				A711DACE2638A3CA001DBD31 /* UIImageViewExtensions.swift in Sources */,
 				A711DA4D26368907001DBD31 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

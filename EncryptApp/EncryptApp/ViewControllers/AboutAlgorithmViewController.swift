@@ -10,7 +10,6 @@ import UIKit
 class AboutAlgorithmViewController: UIViewController {
     
     // MARK: - IB Outlets
-    @IBOutlet var algorithmCreatorImage: UIImageView!
     @IBOutlet var algorithmNameLabel: UILabel!
     @IBOutlet var algorithmDescriptionTextView: UITextView!
     
@@ -24,7 +23,6 @@ class AboutAlgorithmViewController: UIViewController {
         view.setBackground()
         
         algorithmDescriptionTextView.isEditable.toggle()
-        algorithmCreatorImage.image = UIImage(named: algorithm.creator.image)
         algorithmNameLabel.text = algorithm.name
         algorithmDescriptionTextView.text = algorithm.description
     }
