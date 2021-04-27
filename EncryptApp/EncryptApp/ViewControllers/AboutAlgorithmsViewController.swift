@@ -12,11 +12,11 @@ class AboutAlgorithmsViewController: UITableViewController {
     // MARK: - Private constants
     private let algorithms = Algorithm.getAlgorithms()
     
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setTableView()
+        tableView.setTableViewBackground()
     }
     
     // MARK: - IB Actions
@@ -69,15 +69,5 @@ class AboutAlgorithmsViewController: UITableViewController {
         }
         
         aboutAlgorithmVC.algorithm = algorithms[algorithmIndex]
-    }
-}
-
-
-// MARK: - Private methods
-extension AboutAlgorithmsViewController {
-    private func setTableView() {
-        tableView.rowHeight = 80
-        tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
-        tableView.backgroundView?.contentMode = .scaleAspectFill
     }
 }

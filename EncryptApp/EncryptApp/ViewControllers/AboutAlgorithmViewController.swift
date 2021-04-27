@@ -24,14 +24,8 @@ class AboutAlgorithmViewController: UIViewController {
         view.setBackground()
         
         algorithmDescriptionTextView.isEditable.toggle()
-        
         algorithmCreatorImage.image = UIImage(named: algorithm.creator.image)
         algorithmNameLabel.text = algorithm.name
         algorithmDescriptionTextView.text = algorithm.description
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
     }
 }
