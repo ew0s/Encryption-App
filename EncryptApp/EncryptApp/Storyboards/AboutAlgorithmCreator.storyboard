@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--About Algorithm Creator View Controller-->
+        <scene sceneID="S1F-fA-kEe">
+            <objects>
+                <viewController storyboardIdentifier="aboutAlgorithmCreatorID" id="iPG-eC-Pd0" customClass="AboutAlgorithmCreatorViewController" customModule="EncryptApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zmc-A9-W5X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hnz-ua-wul">
+                                <rect key="frame" x="25" y="25" width="132" height="132"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hnz-ua-wul" secondAttribute="height" multiplier="1:1" id="syh-tW-5Xc"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="1j8-mH-7Pp">
+                                <rect key="frame" x="16" y="182" width="343" height="460"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihs-Nj-3kX">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbf-B0-U3W">
+                                        <rect key="frame" x="0.0" y="42.5" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o0o-Mn-fQE">
+                                        <rect key="frame" x="0.0" y="85" width="343" height="302"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnB-EZ-2ly">
+                                        <rect key="frame" x="0.0" y="409" width="343" height="51"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="button">
+                                            <color key="titleColor" red="0.052626349029999998" green="0.099973596629999995" blue="0.18712261320000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="GUJ-Dh-4W2" kind="show" id="4On-o6-INs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fFF-KG-QRc"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hnz-ua-wul" firstAttribute="leading" secondItem="fFF-KG-QRc" secondAttribute="leading" constant="25" id="3sS-a1-y8K"/>
+                            <constraint firstItem="fFF-KG-QRc" firstAttribute="bottom" secondItem="1j8-mH-7Pp" secondAttribute="bottom" constant="25" id="8hx-RD-hAv"/>
+                            <constraint firstItem="hnz-ua-wul" firstAttribute="height" secondItem="zmc-A9-W5X" secondAttribute="height" multiplier="0.197901" id="NSr-86-Agd"/>
+                            <constraint firstItem="fFF-KG-QRc" firstAttribute="trailing" secondItem="1j8-mH-7Pp" secondAttribute="trailing" constant="16" id="PwJ-lw-huX"/>
+                            <constraint firstItem="1j8-mH-7Pp" firstAttribute="leading" secondItem="fFF-KG-QRc" secondAttribute="leading" constant="16" id="VuH-Sb-b46"/>
+                            <constraint firstItem="1j8-mH-7Pp" firstAttribute="top" secondItem="hnz-ua-wul" secondAttribute="bottom" constant="25" id="Wiv-CN-NnI"/>
+                            <constraint firstItem="hnz-ua-wul" firstAttribute="top" secondItem="fFF-KG-QRc" secondAttribute="top" constant="25" id="hcT-1m-T91"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="aboutAlgorithmButton" destination="XnB-EZ-2ly" id="0bc-Ne-Ckr"/>
+                        <outlet property="personDescriptionTextView" destination="o0o-Mn-fQE" id="lx3-8B-LsU"/>
+                        <outlet property="personImage" destination="hnz-ua-wul" id="XMN-Rs-dip"/>
+                        <outlet property="personLivingTimeLabel" destination="Nbf-B0-U3W" id="Yxh-sF-bls"/>
+                        <outlet property="personNameLabel" destination="ihs-Nj-3kX" id="7Ui-hn-eC5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7al-pa-8am" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.600000000000001" y="110.19490254872565"/>
+        </scene>
+        <!--aboutAlgorithmStoryboardID-->
+        <scene sceneID="BN4-gV-NJz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AboutAlgorithm" referencedIdentifier="aboutAlgorithmStoryboardID" id="GUJ-Dh-4W2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7Zj-gl-S2d"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fLw-n4-0gi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="787" y="89"/>
+        </scene>
+    </scenes>
+</document>

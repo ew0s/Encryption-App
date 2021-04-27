@@ -34,8 +34,10 @@ class AboutAlgorithmsViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        1
     }
+    
+    
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "algorithmInfoCell", for: indexPath)
@@ -43,31 +45,25 @@ class AboutAlgorithmsViewController: UITableViewController {
         var content = cell.defaultContentConfiguration()
         let algorithm = algorithms[indexPath.section]
         
-        switch indexPath.row {
-        case 0:
-            content.text = "About algorithm"
-            content.image = UIImage(named: "exclamationMark")
-        default:
-            content.text = algorithm.creator.fullName
-            content.image =  UIImage(named: algorithm.creator.image)
-            content.imageProperties.cornerRadius = tableView.rowHeight / 2
-        }
+        
+        content.text = algorithm.creator.fullName
+        content.image =  UIImage(named: algorithm.creator.image)
+        content.imageProperties.cornerRadius = tableView.rowHeight / 2
         
         cell.contentConfiguration = content
-        cell.tintColor = .white
         
         return cell
     }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let aboutAlgorithmVC = segue.destination as? AboutAlgorithmViewController else {
+        guard let aboutAlgorithmCreatorVC = segue.destination as? AboutAlgorithmCreatorViewController else {
             return
         }
-        guard let algorithmIndex = tableView.indexPathForSelectedRow?.row else {
+        guard let algorithmIndex = tableView.indexPathForSelectedRow?.section else {
             return
         }
         
-        aboutAlgorithmVC.algorithm = algorithms[algorithmIndex]
+        aboutAlgorithmCreatorVC.personAlgorithm = algorithms[algorithmIndex]
     }
 }
