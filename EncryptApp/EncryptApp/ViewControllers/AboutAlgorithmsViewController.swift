@@ -15,8 +15,8 @@ class AboutAlgorithmsViewController: UITableViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 80
-        tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
+        
+        setTableView()
     }
     
     // MARK: - IB Actions
@@ -57,5 +57,27 @@ class AboutAlgorithmsViewController: UITableViewController {
         cell.tintColor = .white
         
         return cell
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let aboutAlgorithmVC = segue.destination as? AboutAlgorithmViewController else {
+            return
+        }
+        guard let algorithmIndex = tableView.indexPathForSelectedRow?.row else {
+            return
+        }
+        
+        aboutAlgorithmVC.algorithm = algorithms[algorithmIndex]
+    }
+}
+
+
+// MARK: - Private methods
+extension AboutAlgorithmsViewController {
+    private func setTableView() {
+        tableView.rowHeight = 80
+        tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
+        tableView.backgroundView?.contentMode = .scaleAspectFill
     }
 }
