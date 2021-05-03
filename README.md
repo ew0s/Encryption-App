@@ -47,6 +47,6 @@ You can send pull requests to this repo until it is open or [contact me](https:/
 
 ## Authors
 
-* [Billie Thompson](https://github.com/ew0s)
+* [Egor Savkovskiy](https://github.com/ew0s)
 
 See also the list of [contributors](https://github.com/ew0s/Encryption-App/graphs/contributors) who participated in this project.
