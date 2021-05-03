@@ -32,6 +32,7 @@ class EncryptionViewController: UIViewController {
         
         view.setBackground()
         setSegmentController()
+        creatorImage.image = UIImage(named: algorithmsData[algorithmSegmentControl.selectedSegmentIndex].creator.image)
     }
     
     override func viewWillLayoutSubviews() {
@@ -114,6 +115,8 @@ extension EncryptionViewController {
             algorithmSegmentControl.insertSegment(
                 withTitle: "\(algorithm.creator.lastName) algorithm", at: index, animated: false)
         }
+        
+        algorithmSegmentControl.selectedSegmentIndex = 0
     }
     
     private func getDataFromFields() -> (String, String)? {
