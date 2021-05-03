@@ -11,7 +11,6 @@ class WelcomeViewController: UIViewController {
 
     // MARK: - IB Outlets
     @IBOutlet var encryptTextButton: UIButton!
-    @IBOutlet var decryptTextButton: UIButton!
     @IBOutlet var iconImageView: UIImageView!
     
     // MARK: - Lifecycle
@@ -22,6 +21,5 @@ class WelcomeViewController: UIViewController {
         
         iconImageView.image = UIImage(named: "lock")
         encryptTextButton.layer.cornerRadius = 15
-        decryptTextButton.layer.cornerRadius = 15
     }
 }
