@@ -22,6 +22,11 @@ class VigenereAlgorithm {
         
         for (keyCharacter, textCharacter) in zip(generatedKey, text.uppercased()) {
             
+            if !alphabet.contains(textCharacter) {
+                encryptedText.append(textCharacter)
+                continue
+            }
+            
             let keyIndex = indexOfAlphabet(forCharacter: keyCharacter)
             let textIndex = indexOfAlphabet(forCharacter: textCharacter)
             let newLetterIndex = (keyIndex + textIndex + 1) % alphabetSize
@@ -37,6 +42,11 @@ class VigenereAlgorithm {
         var decryptedText = ""
         
         for (keyCharacter, textCharacter) in zip(generatedKey, text.uppercased()) {
+            
+            if !alphabet.contains(textCharacter) {
+                decryptedText.append(textCharacter)
+                continue
+            }
             
             let keyIndex = indexOfAlphabet(forCharacter: keyCharacter)
             let textIndex = indexOfAlphabet(forCharacter: textCharacter)
@@ -83,12 +93,5 @@ extension VigenereAlgorithm {
         }
         
         return -1
-    }
-}
-
-// MARK: - Substring extension protocol
-extension StringProtocol {
-    subscript(offset: Int) -> Character {
-        self[index(startIndex, offsetBy: offset)]
     }
 }

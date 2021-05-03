@@ -10,8 +10,12 @@ import UIKit
 class EncryptionViewController: UIViewController {
     
     // MARK: - Private constants
+    private let alertTitle = "Invalid to execute algorithm"
+    private let alertMessage = "make sure you correctly filled all the fields"
+    
     private let algorithmsData = AlgorithmsInfoDataManager.shared.algorithmsData
     private let vigenereAlgorithm = VigenereAlgorithm()
+    private let caesarAlgorithm = CaesarAlgorithm()
 
     // MARK: - IB Outlets
     @IBOutlet var creatorImage: UIImageView!
@@ -42,14 +46,23 @@ class EncryptionViewController: UIViewController {
     @IBAction func algorithmSegmentControllerTapped(_ sender: Any) {
         let selectedAlgorithm = algorithmsData[algorithmSegmentControl.selectedSegmentIndex]
         creatorImage.image = UIImage(named: selectedAlgorithm.creator.image)
+        
+        clearAllFields()
+        
+        switch algorithmSegmentControl.selectedSegmentIndex {
+        case 0:
+            keyTextField.placeholder = "Key for cipher"
+        default:
+            keyTextField.placeholder = "Shift for cipher"
+        }
     }
     
     @IBAction func encryptButtonTapped(_ sender: Any) {
         switch algorithmSegmentControl.selectedSegmentIndex {
         case 0:
             guard let (key, textToEncrypt) = getDataFromFields() else {
-                showAlert(with: "Invalid to execute algorithm",
-                          and: "make sure you filled all the fields")
+                showAlert(with: alertTitle,
+                          and: alertMessage)
                 return
             }
             
@@ -57,8 +70,14 @@ class EncryptionViewController: UIViewController {
             cipheredTextTextView.text = encryptedText
             
         default:
-            showAlert(with: "Invalid algorithm selected", and: "select another algorithm")
-            break
+            guard let (shift, textToEncrypt) = getCaesarAlgorithmData() else {
+                showAlert(with: alertTitle,
+                          and: alertMessage)
+                return
+            }
+            
+            let encryptedText = caesarAlgorithm.encrypt(shift: shift, text: textToEncrypt)
+            cipheredTextTextView.text = encryptedText
         }
     }
     
@@ -66,17 +85,22 @@ class EncryptionViewController: UIViewController {
         switch algorithmSegmentControl.selectedSegmentIndex {
         case 0:
             guard let (key, textToDecrypt) = getDataFromFields() else {
-                showAlert(with: "Invalid to execute algorithm",
-                          and: "make sure you filled all the fields")
+                showAlert(with: alertTitle,
+                          and: alertMessage)
                 return
             }
             
             let decryptedText = vigenereAlgorithm.decrypt(key: key, text: textToDecrypt)
-            print(decryptedText)
             cipheredTextTextView.text = decryptedText
         default:
-            showAlert(with: "Invalid algorithm selected", and: "select another algorithm")
-            break
+            guard let (shift, textToEncrypt) = getCaesarAlgorithmData() else {
+                showAlert(with: alertTitle,
+                          and: alertMessage)
+                return
+            }
+            
+            let encryptedText = caesarAlgorithm.decrypt(shift: shift, text: textToEncrypt)
+            cipheredTextTextView.text = encryptedText
         }
     }
 }
@@ -103,9 +127,26 @@ extension EncryptionViewController {
         return (key, textToEncrypt)
     }
     
+    private func getCaesarAlgorithmData() -> (Int, String)? {
+        guard let (key, textToDecrypt) = getDataFromFields() else {
+            return nil
+        }
+        guard let key = Int(key) else {
+            return nil
+        }
+        
+        return (key, textToDecrypt)
+    }
+    
+    private func clearAllFields() {
+        keyTextField.text = ""
+        textToCipherTextView.text = ""
+        cipheredTextTextView.text = ""
+    }
+    
     private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 }

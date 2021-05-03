@@ -27,7 +27,8 @@
 		A711DAD42638B4E4001DBD31 /* VigenereAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711DAD32638B4E4001DBD31 /* VigenereAlgorithm.swift */; };
 		A7D82E47264021D1005491E4 /* Encryption.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7D82E46264021D0005491E4 /* Encryption.storyboard */; };
 		A7D82E4926402945005491E4 /* EncryptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D82E4826402945005491E4 /* EncryptionViewController.swift */; };
-		A7D82E4B264041CB005491E4 /* CeaserAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D82E4A264041CB005491E4 /* CeaserAlgorithm.swift */; };
+		A7D82E4D2640530F005491E4 /* CaesarAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D82E4C2640530F005491E4 /* CaesarAlgorithm.swift */; };
+		A7D82E4F264054A6005491E4 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D82E4E264054A6005491E4 /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +54,8 @@
 		A711DAD32638B4E4001DBD31 /* VigenereAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VigenereAlgorithm.swift; sourceTree = "<group>"; };
 		A7D82E46264021D0005491E4 /* Encryption.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Encryption.storyboard; sourceTree = "<group>"; };
 		A7D82E4826402945005491E4 /* EncryptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionViewController.swift; sourceTree = "<group>"; };
-		A7D82E4A264041CB005491E4 /* CeaserAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeaserAlgorithm.swift; sourceTree = "<group>"; };
+		A7D82E4C2640530F005491E4 /* CaesarAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaesarAlgorithm.swift; sourceTree = "<group>"; };
+		A7D82E4E264054A6005491E4 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			children = (
 				A711DA8E2636F72F001DBD31 /* UIViewExtensions.swift */,
 				A711DACD2638A3CA001DBD31 /* UIImageViewExtensions.swift */,
+				A7D82E4E264054A6005491E4 /* StringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -179,7 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				A711DAD32638B4E4001DBD31 /* VigenereAlgorithm.swift */,
-				A7D82E4A264041CB005491E4 /* CeaserAlgorithm.swift */,
+				A7D82E4C2640530F005491E4 /* CaesarAlgorithm.swift */,
 			);
 			path = "Encrypt algorithms";
 			sourceTree = "<group>";
@@ -262,7 +265,6 @@
 				A711DAA02636FAEB001DBD31 /* Algorithm.swift in Sources */,
 				A711DAD42638B4E4001DBD31 /* VigenereAlgorithm.swift in Sources */,
 				A711DA9B2636F9F6001DBD31 /* AboutAlgorithmsViewController.swift in Sources */,
-				A7D82E4B264041CB005491E4 /* CeaserAlgorithm.swift in Sources */,
 				A711DAC326375260001DBD31 /* AboutAlgorithmViewController.swift in Sources */,
 				A711DA6C2636A3FA001DBD31 /* WelcomeViewController.swift in Sources */,
 				A711DACB26389743001DBD31 /* AboutAlgorithmCreatorViewController.swift in Sources */,
@@ -271,6 +273,8 @@
 				A711DA4B26368907001DBD31 /* AppDelegate.swift in Sources */,
 				A7D82E4926402945005491E4 /* EncryptionViewController.swift in Sources */,
 				A711DACE2638A3CA001DBD31 /* UIImageViewExtensions.swift in Sources */,
+				A7D82E4F264054A6005491E4 /* StringExtensions.swift in Sources */,
+				A7D82E4D2640530F005491E4 /* CaesarAlgorithm.swift in Sources */,
 				A711DA4D26368907001DBD31 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
