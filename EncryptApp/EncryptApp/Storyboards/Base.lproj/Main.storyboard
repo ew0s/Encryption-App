@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="EncryptApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="gS4-zO-eVk">
+                                <rect key="frame" x="57" y="312.5" width="261" height="42"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huZ-Qv-SyI">
+                                        <rect key="frame" x="0.0" y="0.0" width="261" height="42"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Encrypt text">
+                                            <color key="titleColor" red="0.056653983890000002" green="0.099547006189999995" blue="0.1991505921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="n5O-zp-GVT" kind="presentation" modalPresentationStyle="fullScreen" id="0jx-ul-yWX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Ty-En-XEN">
+                                <rect key="frame" x="112.5" y="25" width="150" height="150"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="goX-8p-hOT">
+                                <rect key="frame" x="210" y="609" width="140" height="33"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6TJ-ll-FeZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="98" height="33"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="18"/>
+                                        <state key="normal" title="About app">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="4HQ-XU-hcA" kind="presentation" modalPresentationStyle="overFullScreen" id="voM-om-ZwP"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Sc2-7E-jGe">
+                                        <rect key="frame" x="115" y="0.0" width="25" height="33"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kGu-v3-axV">
+                                                <rect key="frame" x="0.0" y="0.0" width="25" height="33"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqX-JM-0Sv">
+                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="33"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal">
+                                                            <imageReference key="image" image="exclamationmark.circle.fill" catalog="system" symbolScale="large"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="4HQ-XU-hcA" kind="presentation" modalPresentationStyle="overFullScreen" id="SZ0-KQ-ZH6"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="2Ty-En-XEN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="2FH-he-je8"/>
+                            <constraint firstItem="gS4-zO-eVk" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.482667" constant="80" id="HVP-p1-7HW"/>
+                            <constraint firstItem="2Ty-En-XEN" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="150:667" id="Hjy-UJ-BJd"/>
+                            <constraint firstItem="gS4-zO-eVk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Pwg-VD-oxN"/>
+                            <constraint firstItem="2Ty-En-XEN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eOl-Cv-FdQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="goX-8p-hOT" secondAttribute="bottom" constant="25" id="igo-LI-wdq"/>
+                            <constraint firstItem="gS4-zO-eVk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kfB-Uy-exr"/>
+                            <constraint firstItem="2Ty-En-XEN" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.224888" id="lyF-EV-Hoy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="goX-8p-hOT" secondAttribute="trailing" constant="25" id="pSS-Tz-7hA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="encryptTextButton" destination="huZ-Qv-SyI" id="WtN-Q4-6cq"/>
+                        <outlet property="iconImageView" destination="2Ty-En-XEN" id="hqd-zI-qcr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44" y="114.69265367316342"/>
+        </scene>
+        <!--encryptionStoryboardID-->
+        <scene sceneID="fGQ-Wf-kqD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Encryption" referencedIdentifier="encryptionStoryboardID" id="n5O-zp-GVT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Uqg-dL-nXE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cvt-PV-6fl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="735" y="-120"/>
+        </scene>
+        <!--aboutAlgorithmsID-->
+        <scene sceneID="a9x-PE-4XI">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="aboutAlgorithmsID" storyboardName="AboutAlgorithms" referencedIdentifier="aboutAlgorithmsID" id="4HQ-XU-hcA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bdR-ds-x0g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="894" y="14"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="voM-om-ZwP"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="exclamationmark.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

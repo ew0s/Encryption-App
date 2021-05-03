@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="DEN-MS-eqR">
+            <objects>
+                <navigationController storyboardIdentifier="encryptionStoryboardID" id="9IO-5r-m93" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="pRU-9R-6hz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="uaa-yD-HeC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ne1-ja-Deh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-906" y="41"/>
+        </scene>
+        <!--Encryption-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="EncryptionViewController" customModule="EncryptApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Pel-Xf-Dkf">
+                                <rect key="frame" x="0.0" y="96" width="375" height="32"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="algorithmSegmentControllerTapped:" destination="Y6W-OH-hqX" eventType="valueChanged" id="TSi-aV-UmI"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GT0-wh-Sjj">
+                                <rect key="frame" x="259" y="152" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GT0-wh-Sjj" secondAttribute="height" multiplier="1:1" id="6PN-ff-Gs5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Algorithm name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sr5-aL-xWx">
+                                <rect key="frame" x="16" y="152" width="218" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Key for cipher" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NO1-ix-bTi">
+                                <rect key="frame" x="16" y="197.5" width="218" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oW7-CH-xol">
+                                <rect key="frame" x="16" y="284" width="343" height="75"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="50t-7L-yZ0">
+                                <rect key="frame" x="16" y="375" width="343" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5s-va-mwX">
+                                        <rect key="frame" x="0.0" y="0.0" width="166.5" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Encrypt">
+                                            <color key="titleColor" red="0.052626349029999998" green="0.099973596629999995" blue="0.18712261320000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="encryptButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Icj-wc-ezo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgL-32-efx">
+                                        <rect key="frame" x="176.5" y="0.0" width="166.5" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Decrypt">
+                                            <color key="titleColor" red="0.052626349029999998" green="0.099973596629999995" blue="0.18712261320000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="decryptButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HIM-V5-DXZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0UA-t2-BgM">
+                                <rect key="frame" x="16" y="457.5" width="343" height="75"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zl9-qU-GUp">
+                                <rect key="frame" x="16" y="247.5" width="36.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ciphered text:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPg-ln-grK">
+                                <rect key="frame" x="16" y="421" width="107.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Pel-Xf-Dkf" secondAttribute="trailing" id="0rp-1y-RLt"/>
+                            <constraint firstItem="50t-7L-yZ0" firstAttribute="top" secondItem="oW7-CH-xol" secondAttribute="bottom" constant="16" id="1tp-wH-qkC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GT0-wh-Sjj" secondAttribute="trailing" constant="16" id="9cV-XC-wcH"/>
+                            <constraint firstItem="Zl9-qU-GUp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="AHw-hR-RsK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="50t-7L-yZ0" secondAttribute="trailing" constant="16" id="Byy-gR-qzo"/>
+                            <constraint firstItem="Pel-Xf-Dkf" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="D9P-cV-XJs"/>
+                            <constraint firstItem="0UA-t2-BgM" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.112444" id="DP2-Bd-5Zh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="oW7-CH-xol" secondAttribute="trailing" constant="16" id="IMb-iY-58O"/>
+                            <constraint firstItem="50t-7L-yZ0" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0449775" id="Iob-yx-NNE"/>
+                            <constraint firstItem="GT0-wh-Sjj" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.149925" id="MPF-VF-eAr"/>
+                            <constraint firstItem="GT0-wh-Sjj" firstAttribute="top" secondItem="Pel-Xf-Dkf" secondAttribute="bottom" constant="25" id="SDh-Sm-nNr"/>
+                            <constraint firstItem="NO1-ix-bTi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="SNq-tm-y61"/>
+                            <constraint firstItem="GT0-wh-Sjj" firstAttribute="leading" secondItem="sr5-aL-xWx" secondAttribute="trailing" constant="25" id="T8F-Sm-3IM"/>
+                            <constraint firstItem="0UA-t2-BgM" firstAttribute="top" secondItem="fPg-ln-grK" secondAttribute="bottom" constant="16" id="TRf-Pq-wFm"/>
+                            <constraint firstItem="fPg-ln-grK" firstAttribute="top" secondItem="50t-7L-yZ0" secondAttribute="bottom" constant="16" id="V8a-tv-Nwd"/>
+                            <constraint firstItem="50t-7L-yZ0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="X8x-cr-KgQ"/>
+                            <constraint firstItem="NO1-ix-bTi" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0509745" id="bIV-e8-gbe"/>
+                            <constraint firstItem="Pel-Xf-Dkf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="bof-FF-wXJ"/>
+                            <constraint firstItem="Zl9-qU-GUp" firstAttribute="top" secondItem="NO1-ix-bTi" secondAttribute="bottom" constant="16" id="dX0-xz-Erg"/>
+                            <constraint firstItem="fPg-ln-grK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="eC8-5Y-sv9"/>
+                            <constraint firstItem="oW7-CH-xol" firstAttribute="top" secondItem="Zl9-qU-GUp" secondAttribute="bottom" constant="16" id="f7W-6l-dY3"/>
+                            <constraint firstItem="GT0-wh-Sjj" firstAttribute="leading" secondItem="NO1-ix-bTi" secondAttribute="trailing" constant="25" id="h8e-iP-Zdr"/>
+                            <constraint firstItem="oW7-CH-xol" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="pne-Kx-8f5"/>
+                            <constraint firstItem="0UA-t2-BgM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="q3N-wT-lbq"/>
+                            <constraint firstItem="sr5-aL-xWx" firstAttribute="top" secondItem="Pel-Xf-Dkf" secondAttribute="bottom" constant="25" id="qWk-fk-QUm"/>
+                            <constraint firstItem="NO1-ix-bTi" firstAttribute="top" secondItem="sr5-aL-xWx" secondAttribute="bottom" constant="25" id="rms-16-vuK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0UA-t2-BgM" secondAttribute="trailing" constant="16" id="vIf-J7-V93"/>
+                            <constraint firstItem="oW7-CH-xol" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.112444" id="x7w-Qt-78J"/>
+                            <constraint firstItem="sr5-aL-xWx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="z8Z-Dp-2yo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Encryption" id="wbN-fD-siX">
+                        <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="jpV-iz-NSy">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backButtonTapped:" destination="Y6W-OH-hqX" id="iar-JY-HlR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="algorithmNameLabel" destination="sr5-aL-xWx" id="Vb7-Uo-6tl"/>
+                        <outlet property="algorithmSegmentControl" destination="Pel-Xf-Dkf" id="fxG-b8-U1I"/>
+                        <outlet property="cipheredTextTextView" destination="0UA-t2-BgM" id="fA4-3Y-Eio"/>
+                        <outlet property="creatorImage" destination="GT0-wh-Sjj" id="fsN-oZ-v54"/>
+                        <outlet property="keyTextField" destination="NO1-ix-bTi" id="SnC-Dz-nCI"/>
+                        <outlet property="textToCipherTextView" destination="oW7-CH-xol" id="fdm-Zm-O6z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.600000000000001" y="40.929535232383813"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
